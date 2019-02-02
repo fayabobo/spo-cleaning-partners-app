@@ -1,5 +1,5 @@
 package spo.cleaning.partners.app.core;
 
-public class toto {
+public class Response {
 
 }
