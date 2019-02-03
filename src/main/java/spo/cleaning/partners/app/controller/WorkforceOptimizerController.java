@@ -3,14 +3,18 @@ package spo.cleaning.partners.app.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import spo.cleaning.partners.app.core.Response;
+import spo.cleaning.partners.app.core.WorkforceOptimizerResponse;
 import spo.cleaning.partners.app.core.StructureConfiguration;
+import spo.cleaning.partners.app.core.WorkforceOptimizerRequest;
 
 /**
  * Workforce optimizer Controller.
@@ -28,7 +32,7 @@ public class WorkforceOptimizerController {
 	 * @author nsanzfia
 	 */
 	@RequestMapping(value = "/optimizeWorkforce", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Object> optimizeWorkForce() {
+	public ResponseEntity<Object> optimizeWorkForce(@Valid @RequestBody WorkforceOptimizerRequest workforceOptimizerRequest) {
 		return buildResponse();
 	}
 
@@ -39,7 +43,7 @@ public class WorkforceOptimizerController {
 	 * @author nsanzfia
 	 */
 	private ResponseEntity<Object> buildResponse() {
-		Response response = new Response();
+		WorkforceOptimizerResponse response = new WorkforceOptimizerResponse();
 		List<StructureConfiguration> structureConfigurations = new ArrayList<>();
 		StructureConfiguration structureConfiguration = new StructureConfiguration(10, 15);
 		structureConfigurations.add(structureConfiguration);
