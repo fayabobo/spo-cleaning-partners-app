@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import spo.cleaning.partners.app.core.Response;
-
 /**
  * Workforce optimizer Controller.
  * 
@@ -15,8 +13,7 @@ import spo.cleaning.partners.app.core.Response;
  *
  */
 @RestController
-@RequestMapping("/work-force-optimizer")
-public class WorkForceOptimizerController {
+public class WorkforceOptimizerController {
 
 	/**
 	 * Optimizes workforce.
@@ -24,8 +21,8 @@ public class WorkForceOptimizerController {
 	 * @return the responseEntity
 	 * @author nsanzfia
 	 */
-	@RequestMapping(value = "/optimize", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Response> optimizeWorkForce() {
+	@RequestMapping(value = "/optimizeWorkforce", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Object> optimizeWorkForce() {
 		return buildResponse();
 	}
 
@@ -35,7 +32,7 @@ public class WorkForceOptimizerController {
 	 * @return responseEntity
 	 * @author nsanzfia
 	 */
-	private ResponseEntity<Response> buildResponse() {
-		return ResponseEntity.ok(new Response());
+	private ResponseEntity<Object> buildResponse() {
+		return ResponseEntity.ok().build();
 	}
 }
