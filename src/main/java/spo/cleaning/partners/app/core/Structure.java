@@ -2,6 +2,10 @@ package spo.cleaning.partners.app.core;
 
 import java.util.List;
 
+import javax.validation.constraints.Size;
+
+import spo.cleaning.partners.app.constants.Constants;
+
 /**
  * Class which represents a structure
  * 
@@ -10,6 +14,7 @@ import java.util.List;
  */
 public class Structure {
 
+	@Size(max = Constants.MAX_ROOMS_IN_A_STRUCTURE)
 	List<Room> rooms;
 
 	public List<Room> getRooms() {
