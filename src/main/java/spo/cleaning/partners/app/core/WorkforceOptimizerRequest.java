@@ -19,41 +19,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonInclude(Include.NON_NULL)
 public class WorkforceOptimizerRequest implements Serializable {
 
+	/**
+	 * Numbers of rooms for providers.
+	 * 
+	 * @author nsanzfia
+	 */
 	@NotNull
-	@JsonProperty("cleaningProviders")
-	List<CleaningProvider> cleaningProviders;
-	
+	@JsonProperty("rooms")
+	List<Integer> providersRoomsNumbers;
+
+	/**
+	 * Number of seniors.
+	 * 
+	 * @author nsanzfia
+	 */
 	@NotNull
-	@JsonProperty("seniorCleaners")
-	List<SeniorCleaner> seniorCleaners;
-	
+	@JsonProperty("senior")
+	int seniorsNumber;
+
+	/**
+	 * Number of juniors.
+	 * 
+	 * @author nsanzfia
+	 */
 	@NotNull
-	@JsonProperty("juniorCleaners")
-	List<JuniorCleaner> juniorCleaners;
+	@JsonProperty("junior")
+	int juniorsNumber;
 
-	public List<CleaningProvider> getCleaningProviders() {
-		return cleaningProviders;
+	public List<Integer> getProvidersRoomsNumbers() {
+		return providersRoomsNumbers;
 	}
 
-	public void setCleaningProviders(List<CleaningProvider> cleaningProviders) {
-		this.cleaningProviders = cleaningProviders;
+	public void setProvidersRoomsNumbers(List<Integer> providersRoomsNumbers) {
+		this.providersRoomsNumbers = providersRoomsNumbers;
 	}
 
-	public List<SeniorCleaner> getSeniorCleaners() {
-		return seniorCleaners;
+	public int getSeniorsNumber() {
+		return seniorsNumber;
 	}
 
-	public void setSeniorCleaners(List<SeniorCleaner> seniorCleaners) {
-		this.seniorCleaners = seniorCleaners;
+	public void setSeniorsNumber(int seniorsNumber) {
+		this.seniorsNumber = seniorsNumber;
 	}
 
-	public List<JuniorCleaner> getJuniorCleaners() {
-		return juniorCleaners;
+	public int getJuniorsNumber() {
+		return juniorsNumber;
 	}
 
-	public void setJuniorCleaners(List<JuniorCleaner> juniorCleaners) {
-		this.juniorCleaners = juniorCleaners;
+	public void setJuniorsNumber(int juniorsNumber) {
+		this.juniorsNumber = juniorsNumber;
 	}
-	
-	
+
 }

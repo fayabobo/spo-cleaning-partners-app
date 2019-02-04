@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
@@ -16,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class WorkforceOptimizerResponse implements Serializable {
 
+	@JsonProperty()
 	List<StructureConfiguration> structureConfigurations;
 
 	public List<StructureConfiguration> getStructureConfigurations() {
