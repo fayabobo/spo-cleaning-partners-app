@@ -10,7 +10,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4j.version>1.7.25</slf4j.version>
-		<powermock.version>1.6.5</powermock.version>
+		<powermock.version>1.7.4</powermock.version>
+		<mockito-core.version>2.23.4</mockito-core.version>
 		<spring-boot.version>2.0.8.RELEASE</spring-boot.version>
 		<validation-api.version>2.0.1.Final</validation-api.version>
 		<hibernate-validator.version>6.0.14.Final</hibernate-validator.version>
@@ -33,8 +34,13 @@
 
 		<dependency>
 			<groupId>org.powermock</groupId>
-			<artifactId>powermock-api-mockito</artifactId>
+			<artifactId>powermock-api-mockito2</artifactId>
 			<version>${powermock.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito-core.version}</version>
 		</dependency>
 		<!-- End of test dependencies -->
 
@@ -92,6 +98,15 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 		<!-- End of javax for validation of DTOs -->
+
+		<!-- Javax for services injection -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+		<!-- End of Javax for services injection -->
+
 
 	</dependencies>
 
