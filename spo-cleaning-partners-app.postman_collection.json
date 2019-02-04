@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "d99062ce-0d4c-4065-8461-b60230fe0513",
+		"name": "spo-cleaning-partners-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "work-force-optimizer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rooms\": [\n        20,\n        30\n    ],\n    \"senior\": 6,\n    \"junior\": 7\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/spo-cleaning-partners-app/optimizeWorkforce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spo-cleaning-partners-app",
+						"optimizeWorkforce"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
