@@ -35,7 +35,7 @@ public class WorkforceOptimizerRequest implements Serializable {
 	 */
 	@NotNull
 	@JsonProperty("senior")
-	int seniorsNumber;
+	Integer seniorsNumber;
 
 	/**
 	 * Number of juniors.
@@ -44,7 +44,7 @@ public class WorkforceOptimizerRequest implements Serializable {
 	 */
 	@NotNull
 	@JsonProperty("junior")
-	int juniorsNumber;
+	Integer juniorsNumber;
 
 	public List<Integer> getProvidersRoomsNumbers() {
 		return providersRoomsNumbers;
@@ -54,19 +54,19 @@ public class WorkforceOptimizerRequest implements Serializable {
 		this.providersRoomsNumbers = providersRoomsNumbers;
 	}
 
-	public int getSeniorsNumber() {
+	public Integer getSeniorsNumber() {
 		return seniorsNumber;
 	}
 
-	public void setSeniorsNumber(int seniorsNumber) {
+	public void setSeniorsNumber(Integer seniorsNumber) {
 		this.seniorsNumber = seniorsNumber;
 	}
 
-	public int getJuniorsNumber() {
+	public Integer getJuniorsNumber() {
 		return juniorsNumber;
 	}
 
-	public void setJuniorsNumber(int juniorsNumber) {
+	public void setJuniorsNumber(Integer juniorsNumber) {
 		this.juniorsNumber = juniorsNumber;
 	}
 

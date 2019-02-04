@@ -3,6 +3,7 @@ package spo.cleaning.partners.app.core;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
@@ -18,37 +19,39 @@ public class StructureConfiguration implements Serializable {
 	/**
 	 * Number of seniors in this configuration.
 	 */
-	private int seniors;
+	@JsonProperty("senior")
+	private int seniorsNumber;
 
 	/**
 	 * The number of juniors in this configuration.
 	 */
-	private int juniors;
+	@JsonProperty("junior")
+	private int juniorsNumber;
 
 	public StructureConfiguration() {
 		super();
 	}
-
-	public StructureConfiguration(int seniors, int juniors) {
+	
+	public StructureConfiguration(int seniorsNumber, int juniorsNumber) {
 		super();
-		this.seniors = seniors;
-		this.juniors = juniors;
+		this.seniorsNumber = seniorsNumber;
+		this.juniorsNumber = juniorsNumber;
 	}
 
-	public int getSeniors() {
-		return seniors;
+	public int getSeniorsNumber() {
+		return seniorsNumber;
 	}
 
-	public void setSeniors(int seniors) {
-		this.seniors = seniors;
+	public void setSeniorsNumber(int seniorsNumber) {
+		this.seniorsNumber = seniorsNumber;
 	}
 
-	public int getJuniors() {
-		return juniors;
+	public int getJuniorsNumber() {
+		return juniorsNumber;
 	}
 
-	public void setJuniors(int juniors) {
-		this.juniors = juniors;
+	public void setJuniorsNumber(int juniorsNumber) {
+		this.juniorsNumber = juniorsNumber;
 	}
 
 }
