@@ -20,54 +20,66 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkforceOptimizerRequest implements Serializable {
 
 	/**
-	 * Numbers of rooms for providers.
+	 * The list of room numbers in each structure.
 	 * 
 	 * @author nsanzfia
 	 */
 	@NotNull
 	@JsonProperty("rooms")
-	List<Integer> providersRoomsNumbers;
+	List<Integer> listOfRoomNumbersInEachStructure;
 
 	/**
-	 * Number of seniors.
+	 * Senior capacity.
 	 * 
 	 * @author nsanzfia
 	 */
 	@NotNull
 	@JsonProperty("senior")
-	Integer seniorsNumber;
+	Integer seniorCapacity;
 
 	/**
-	 * Number of juniors.
+	 * Junior capacity.
 	 * 
 	 * @author nsanzfia
 	 */
 	@NotNull
 	@JsonProperty("junior")
-	Integer juniorsNumber;
+	Integer juniorCapacity;
 
-	public List<Integer> getProvidersRoomsNumbers() {
-		return providersRoomsNumbers;
+	/**
+	 * Get the list of room numbers in each structure.
+	 * 
+	 * @return the list
+	 * @author nsanzfia
+	 */
+	public List<Integer> getListOfRoomNumbersInEachStructure() {
+		return listOfRoomNumbersInEachStructure;
 	}
 
-	public void setProvidersRoomsNumbers(List<Integer> providersRoomsNumbers) {
-		this.providersRoomsNumbers = providersRoomsNumbers;
+	/**
+	 * Set the list of room numbers in each structure.
+	 * 
+	 * @return the list
+	 * @author nsanzfia
+	 */
+	public void setListOfRoomNumbersInEachStructure(final List<Integer> listOfRoomNumbersInEachStructure) {
+		this.listOfRoomNumbersInEachStructure = listOfRoomNumbersInEachStructure;
 	}
 
-	public Integer getSeniorsNumber() {
-		return seniorsNumber;
+	public Integer getSeniorCapacity() {
+		return seniorCapacity;
 	}
 
-	public void setSeniorsNumber(Integer seniorsNumber) {
-		this.seniorsNumber = seniorsNumber;
+	public void setSeniorCapacity(final Integer seniorCapacity) {
+		this.seniorCapacity = seniorCapacity;
 	}
 
-	public Integer getJuniorsNumber() {
-		return juniorsNumber;
+	public Integer getJuniorCapacity() {
+		return juniorCapacity;
 	}
 
-	public void setJuniorsNumber(Integer juniorsNumber) {
-		this.juniorsNumber = juniorsNumber;
+	public void setJuniorCapacity(final Integer juniorCapacity) {
+		this.juniorCapacity = juniorCapacity;
 	}
 
 }

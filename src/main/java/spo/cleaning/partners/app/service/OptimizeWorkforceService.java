@@ -1,8 +1,10 @@
 package spo.cleaning.partners.app.service;
 
-import org.springframework.http.ResponseEntity;
+import java.util.List;
 
+import spo.cleaning.partners.app.core.StructureConfiguration;
 import spo.cleaning.partners.app.core.WorkforceOptimizerRequest;
+import spo.cleaning.partners.app.exception.InconsitentParametersException;
 
 /**
  * Service to optimize the workforce.
@@ -18,7 +20,8 @@ public interface OptimizeWorkforceService {
 	 * @param workforceOptimizerRequest
 	 * @return ResponseEntity
 	 * @author nsanzfia
+	 * @throws InconsitentParametersException 
 	 */
-	ResponseEntity<Object> optimizeWorkforce(WorkforceOptimizerRequest workforceOptimizerRequest);
+	List<StructureConfiguration> optimizeWorkforce(WorkforceOptimizerRequest workforceOptimizerRequest) throws InconsitentParametersException;
 
 }
